@@ -1,66 +1,11 @@
-# manik-azure-adf-project
-manik-azure-adf-project
-
 # Azure Data Factory (ADF) Excel File Copy Project
 
 Creating an Azure Data Factory (ADF) project to copy an Excel file from a source blob container to a destination container using ADF pipeline and Azure Key Vault involves several steps and requires careful orchestration.
 
 ## Directory Structure
 
-Directory Structure:
-lua
-Copy code
-/azure-adf-project/
-|-- /adf/
-|   |-- /pipelines/
-|   |   |-- copy-excel-pipeline.json
-|   |-- /datasets/
-|   |   |-- source-blob-dataset.json
-|   |   |-- destination-blob-dataset.json
-|-- /keyvault/
-|   |-- keyvault-configuration.json
-|-- README.md
-Steps:
-Azure Key Vault Setup (keyvault/keyvault-configuration.json):
-
-Deploy an Azure Key Vault instance.
-Store connection strings or SAS tokens for source and destination blob storage accounts in the key vault.
-ADF Datasets (adf/datasets/):
-
-Source Blob Dataset (source-blob-dataset.json):
-
-Set up a linked service to the source blob container using the connection string from Azure Key Vault.
-Define a dataset for the source blob container.
-Destination Blob Dataset (destination-blob-dataset.json):
-
-Set up a linked service to the destination blob container using the connection string from Azure Key Vault.
-Define a dataset for the destination blob container.
-ADF Pipeline (adf/pipelines/copy-excel-pipeline.json):
-
-Create a pipeline in Azure Data Factory.
-Add a "Copy Data" activity.
-Set the source to the source blob dataset and the destination to the destination blob dataset.
-Map the Excel columns accordingly if needed.
-Execution:
-
-Trigger the pipeline manually or on a schedule, based on your requirement.
-Additional Notes:
-Ensure you have appropriate permissions set for Azure Data Factory to access the Key Vault and the Blob Storage.
-Test the pipeline in ADF's debug mode before triggering it to verify the copy operation.
-Consider monitoring and logging to keep track of pipeline runs.
-Note: The JSON files mentioned in the directory structure are representative. In a real-world scenario, you would need to configure them using Azure Portal or Azure SDKs to match your exact requirements
-ChatGPT
-Sure, here's a Markdown README file for your Azure Data Factory (ADF) project:
-
-markdown
-Copy code
-# Azure Data Factory (ADF) Excel File Copy Project
-
-Creating an Azure Data Factory (ADF) project to copy an Excel file from a source blob container to a destination container using ADF pipeline and Azure Key Vault involves several steps and requires careful orchestration.
-
-## Directory Structure
 ```
-/azure-adf-project/
+azure-adf-project/
 |-- /adf/
 | |-- /pipelines/
 | | |-- copy-excel-pipeline.json
@@ -70,6 +15,7 @@ Creating an Azure Data Factory (ADF) project to copy an Excel file from a source
 |-- /keyvault/
 | |-- keyvault-configuration.json
 |-- README.md
+
 ```
 ## Steps
 
